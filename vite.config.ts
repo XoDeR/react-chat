@@ -9,6 +9,7 @@ export default defineConfig({
       "@router": "/src/router",
       "@interfaces": "/src/interfaces",
       "@store": "/src/store",
+      "@components": "/src/components",
     },
   },
   plugins: [react()],

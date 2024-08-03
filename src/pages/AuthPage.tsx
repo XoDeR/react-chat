@@ -1,3 +1,5 @@
+import Login from "@components/Auth/Login";
+
 const AuthPage = () => {
   const step = "Step 1/3";
 
@@ -9,6 +11,7 @@ const AuthPage = () => {
       <p className="text-center font-bold text-white">
         {"Step"} {step.split(" ")[1]}
       </p>
+      {/* <Login /> */}
     </div>
   );
 };

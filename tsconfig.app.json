@@ -5,7 +5,8 @@
       "@pages/*": ["pages/*"],
       "@router/*": ["router/*"],
       "@interfaces/*": ["interfaces/*"],
-      "@store/*": ["store/*"]
+      "@store/*": ["store/*"],
+      "@components/*": ["components/*"]
     },
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
