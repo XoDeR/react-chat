@@ -30,8 +30,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const database = getDatabase(app);
 const storage = getStorage(app, `gs://${VITE_STORAGE_BUCKET}`);
 
 setPersistence(auth, browserLocalPersistence);
 
-export { auth, db, storage };
+export { auth, db, database, storage };
