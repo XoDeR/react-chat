@@ -14,14 +14,14 @@ const RestrictedRoute = ({
   const currentUser = null;
 
   useEffect(() => {
-    if (currentUser && /*currentUser.displayName*/) {
+    if (currentUser /*&& currentUser.displayName*/) {
       localStorage.removeItem("step");
     }
   }, [currentUser]);
 
   return (
     <>
-      {isLoggedIn !== null && /*!currentUser.displayName*/ && (
+      {isLoggedIn !== null /*&& !currentUser.displayName*/ && (
         <Suspense>
           <Component />
         </Suspense>
