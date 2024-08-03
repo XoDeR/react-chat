@@ -3,7 +3,8 @@
     "baseUrl": "./src",
     "paths": {
       "@pages/*": ["pages/*"],
-      "@router/*": ["router/*"]
+      "@router/*": ["router/*"],
+      "@interfaces/*": ["interfaces/*"]
     },
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
