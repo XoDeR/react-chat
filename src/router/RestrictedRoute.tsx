@@ -1,5 +1,6 @@
 import { Suspense, useEffect } from "react";
 import { Navigate } from "react-router-dom";
+import useChatStore from "@store/Store";
 
 interface IRestrictedRouteProps {
   component: React.ComponentType;
@@ -10,25 +11,25 @@ const RestrictedRoute = ({
   component: Component,
   redirectTo = "/",
 }: IRestrictedRouteProps) => {
-  const isLoggedIn = false;
-  const currentUser = null;
+  const isLoggedIn = useChatStore((state) => state.isLoggedIn);
+  const currentUser = useChatStore((state) => state.currentUser);
 
   useEffect(() => {
-    if (currentUser /*&& currentUser.displayName*/) {
+    if (currentUser && currentUser.displayName) {
       localStorage.removeItem("step");
     }
   }, [currentUser]);
 
   return (
     <>
-      {isLoggedIn !== null /*&& !currentUser.displayName*/ && (
+      {isLoggedIn !== null && !currentUser.displayName && (
         <Suspense>
           <Component />
         </Suspense>
       )}
-      {/* {isLoggedIn === true && currentUser.displayName && (
+      {isLoggedIn === true && currentUser.displayName && (
         <Navigate to={redirectTo} />
-      )} */}
+      )}
     </>
   );
 };

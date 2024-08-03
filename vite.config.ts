@@ -8,6 +8,7 @@ export default defineConfig({
       "@pages": "/src/pages",
       "@router": "/src/router",
       "@interfaces": "/src/interfaces",
+      "@store": "/src/store",
     },
   },
   plugins: [react()],

@@ -1,4 +1,5 @@
 import { Navigate } from "react-router-dom";
+import useChatStore from "@store/Store";
 
 interface IPrivateRouteProps {
   component: React.ComponentType;
@@ -9,10 +10,10 @@ const PrivateRoute = ({
   component: Component,
   redirectTo = "/authentication",
 }: IPrivateRouteProps) => {
-  const isLoggedIn = false;
-  const currentUser = null;
+  const isLoggedIn = useChatStore((state) => state.isLoggedIn);
+  const currentUser = useChatStore((state) => state.currentUser);
 
-  return isLoggedIn && currentUser /*&& currentUser?.displayName*/ ? (
+  return isLoggedIn && currentUser && currentUser?.displayName ? (
     <Component />
   ) : (
     <Navigate to={redirectTo} />
