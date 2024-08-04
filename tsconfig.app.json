@@ -7,7 +7,8 @@
       "@interfaces/*": ["interfaces/*"],
       "@store/*": ["store/*"],
       "@components/*": ["components/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@appFireBase/*": ["appFireBase/*"]
     },
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

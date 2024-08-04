@@ -1,7 +1,9 @@
 import Login from "@components/Auth/Login";
+import useChatStore from "@store/Store";
 
 const AuthPage = () => {
-  const step = "Step 1/3";
+  const isLoggedIn = useChatStore((state) => state.isLoggedIn);
+  console.log(isLoggedIn);
 
   return (
     <div className="relative flex h-full flex-col gap-2 bg-slate-400 py-10">
@@ -9,9 +11,14 @@ const AuthPage = () => {
         CHAT
       </div>
       <p className="text-center font-bold text-white">
-        {"Step"} {step.split(" ")[1]}
+        Login Signup ForgotPassword Signout
       </p>
-      {/* <Login /> */}
+      {!isLoggedIn && (
+        <div>
+          <button>Login</button>
+          <button>Signup</button>
+        </div>
+      )}
     </div>
   );
 };

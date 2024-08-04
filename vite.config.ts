@@ -11,6 +11,7 @@ export default defineConfig({
       "@store": "/src/store",
       "@components": "/src/components",
       "@hooks": "/src/hooks",
+      "@appFireBase": "/src/appFireBase",
     },
   },
   plugins: [react()],

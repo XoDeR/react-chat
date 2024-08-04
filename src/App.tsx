@@ -1,7 +1,7 @@
 import AppRouter from "@router/AppRouter";
+import useOnAuthStateChanged from "@hooks/useOnAuthStateChanged";
 
 const App = () => {
-  // TODO
   useOnAuthStateChanged();
 
   return <AppRouter />;
