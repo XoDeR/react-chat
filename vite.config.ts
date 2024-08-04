@@ -10,6 +10,7 @@ export default defineConfig({
       "@interfaces": "/src/interfaces",
       "@store": "/src/store",
       "@components": "/src/components",
+      "@hooks": "/src/hooks",
     },
   },
   plugins: [react()],
